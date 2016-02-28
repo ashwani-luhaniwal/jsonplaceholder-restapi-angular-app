@@ -1,0 +1,24 @@
+{
+  "name": "user-spa-app",
+  "version": "1.0.0",
+  "description": "Users single page application using JSONPlaceHolder API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SPA",
+    "users",
+    "application"
+  ],
+  "author": "Ashwani K Luhaniwal",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-cookie": "^4.1.0",
+    "angular-resource": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bootstrap3": "^3.3.5",
+    "jquery": "^2.2.1"
+  }
+}

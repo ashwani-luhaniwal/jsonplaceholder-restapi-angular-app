@@ -1,0 +1,27 @@
+.f-space10 {
+    margin: 15px 0;
+}
+.registeration-link {
+	margin: 15px 0;
+}
+.user-image {
+    text-align: center;
+}
+.fa-user {
+	font-size: 15em;
+}
+.info-block p {
+    margin: 8px 0;
+    text-align: center;
+}
+.info-block {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+}
+.profile-heading {
+    margin-bottom: 15px;
+}
+.profile-heading span {
+    font-size: 30px;
+}

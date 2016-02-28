@@ -1,0 +1,50 @@
+
+<div class="jumbotron">
+  <h1>Trail Worker Application</h1>
+  <p>Single Page Application based on AngularJS</p>
+</div>
+
+<div class="row" ng-controller="profileCtrl">
+	<div class="col-sm-3">
+		<div class="info-block">
+			<div class="user-image"><i class="fa fa-user"></i></div>
+			<p class="user-name"><strong>Name: </strong>{{ user_info.name }} ({{ user_info.username }})</p>
+			<p class="user-email"><strong>Email: </strong>{{ user_info.email }}</p>
+			<p class="user-address"><strong>Address: </strong>{{ user_info.address.street }}, {{ user_info.address.suite }}, {{ user_info.address.city }}, {{ user_info.address.zipcode }}</p>
+			<p class="user-phone"><strong>Phone: </strong>{{ user_info.phone }}</p>
+			<p class="user-website"><strong>Website: </strong>{{ user_info.website }}</p>
+			<p class="user-company"><strong>Company Name: </strong>{{ user_info.company.name }}</p>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<div class="profile-heading">
+			<span>You have posted {{ totalPosts }} posts</span>
+			<button class="btn btn-primary pull-right" type="button" ng-click="logout()">Log Out</button>
+		</div>
+		<div class="well" ng-repeat="post in user_posts">
+		    <div class="media">
+		    	<!-- <a class="pull-left" href="#">
+		    		<img class="media-object" src="http://placekitten.com/150/150">
+		  		</a> -->
+		  		<div class="media-body">
+		    		<h4 class="media-heading">{{ post.title }}</h4>
+		          	<!-- <p class="text-right">By Francisco</p> -->
+		          	<p>{{ post.body }}</p>
+		          	<!-- <ul class="list-inline list-unstyled">
+		  				<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+		            	<li>|</li>
+		            	<span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+		            	<li>|</li>
+		            	<li>
+		               		<span class="glyphicon glyphicon-star"></span>
+		                    <span class="glyphicon glyphicon-star"></span>
+		                    <span class="glyphicon glyphicon-star"></span>
+		                    <span class="glyphicon glyphicon-star"></span>
+		                    <span class="glyphicon glyphicon-star-empty"></span>
+		            	</li>
+					</ul> -->
+		       	</div>
+		    </div>
+		</div>
+	</div>
+</div>
