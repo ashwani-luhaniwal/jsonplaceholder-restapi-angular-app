@@ -1,7 +1,11 @@
 
-<div class="jumbotron">
-  <h1>Trail Worker Application</h1>
-  <p>Single Page Application based on AngularJS</p>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="jumbotron">
+  			<h1>Trail Worker Application</h1>
+  			<p>Single Page Application based on AngularJS</p>
+		</div>
+	</div>
 </div>
 
 <div class="row" ng-controller="profileCtrl">
@@ -15,49 +19,54 @@
 			<p class="user-website"><strong>Website: </strong>{{ user_info.website }}</p>
 			<p class="user-company"><strong>Company Name: </strong>{{ user_info.company.name }}</p>
 		</div>
+		<div class="f-space10"></div>
+		<a href="#/publish" class="btn btn-lg btn-danger btn-block">Publish New Post</a>
 	</div>
 	<div class="col-sm-9">
-		<div class="profile-heading">
-			<span>You have posted {{ user_posts.length }} posts</span>
-			<button class="btn btn-primary pull-right" type="button" ng-click="logout()">Log Out</button>
-		</div>
-		<div class="well" ng-repeat="post in user_posts">
-		    <div class="media">
-		    	<!-- <a class="pull-left" href="#">
-		    		<img class="media-object" src="http://placekitten.com/150/150">
-		  		</a> -->
-		  		<div class="media-body">
-		    		<h3 class="media-heading">{{ post.title }}</h3>
-		          	<p>{{ post.body }}</p>
-		          	<ul class="list-inline list-unstyled">
-		          		<li><p class="text-right"><strong>From:</strong> {{ user_info.name }} ({{ user_info.username }})</p></li>
-		          		<!-- <li>|</li>
-		            	<li><span><i class="glyphicon glyphicon-comment"></i> 2 comments</span></li>
-		            	<li>|</li>
-		            	<li>
-		               		<span class="glyphicon glyphicon-star"></span>
-		                    <span class="glyphicon glyphicon-star"></span>
-		                    <span class="glyphicon glyphicon-star"></span>
-		                    <span class="glyphicon glyphicon-star"></span>
-		                    <span class="glyphicon glyphicon-star-empty"></span>
-		            	</li> -->
-					</ul>
-					<button class="btn btn-success pull-right" ng-click="comments(post.id)">Show comments</button>
-		       	</div>
-		    </div>
-		</div>
-		<hr />
-		<h2 ng-show="totalComment">You have received {{ post_comments.length }} comments on this post.</h2>
-		<div class="well" ng-repeat="comment in post_comments">
-	    	<div class="media">
-	  			<div class="media-body">
-	    			<h3 class="media-heading">{{ comment.name }}</h3>
-	          		<p>{{ comment.body }}</p>
-	          		<ul class="list-inline list-unstyled">
-		          		<li><p class="text-right"><strong>From:</strong> {{ comment.email }}</p></li>
-					</ul>
-	       		</div>
-	    	</div>
+		<div class="posts-comments">
+			<div class="profile-heading">
+				<span>You have posted {{ user_posts.length }} posts</span>
+				<button class="btn btn-lg btn-primary pull-right" type="button" ng-click="logout()">Log Out</button>
+			</div>
+			<div class="well" ng-repeat="post in user_posts">
+			    <div class="media">
+			    	<!-- <a class="pull-left" href="#">
+			    		<img class="media-object" src="http://placekitten.com/150/150">
+			  		</a> -->
+			  		<div class="media-body">
+			    		<h3 class="media-heading">{{ post.title }}</h3>
+			          	<p>{{ post.body }}</p>
+			          	<ul class="list-inline list-unstyled">
+			          		<li><p class="text-right"><strong>From:</strong> {{ user_info.name }} ({{ user_info.username }})</p></li>
+			          		<!-- <li>|</li>
+			            	<li><span><i class="glyphicon glyphicon-comment"></i> 2 comments</span></li>
+			            	<li>|</li>
+			            	<li>
+			               		<span class="glyphicon glyphicon-star"></span>
+			                    <span class="glyphicon glyphicon-star"></span>
+			                    <span class="glyphicon glyphicon-star"></span>
+			                    <span class="glyphicon glyphicon-star"></span>
+			                    <span class="glyphicon glyphicon-star-empty"></span>
+			            	</li> -->
+						</ul>
+						<button class="btn btn-lg btn-success pull-right" ng-click="comments(post.id)">Show comments</button>
+			       	</div>
+			    </div>
+			</div>
+			<div class="comments-view" ng-show="totalComment">
+				<h2>You have received {{ post_comments.length }} comments on this post.</h2>
+				<div class="well" ng-repeat="comment in post_comments">
+			    	<div class="media">
+			  			<div class="media-body">
+			    			<h3 class="media-heading">{{ comment.name }}</h3>
+			          		<p>{{ comment.body }}</p>
+			          		<ul class="list-inline list-unstyled">
+				          		<li><p class="text-right"><strong>From:</strong> {{ comment.email }}</p></li>
+							</ul>
+			       		</div>
+			    	</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

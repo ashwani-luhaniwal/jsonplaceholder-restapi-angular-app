@@ -1,7 +1,11 @@
 
-<div class="jumbotron">
-  <h1>Trail Worker Application</h1>
-  <p>Single Page Application based on AngularJS</p>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="jumbotron">
+  			<h1>Trail Worker Application</h1>
+  			<p>Single Page Application based on AngularJS</p>
+		</div>
+	</div>
 </div>
 
 <div class="row">
@@ -20,36 +24,38 @@
 		</div>
 	</div>
 	<div class="col-sm-9">
-		<h2>List of registered users</h2>
-		<div class="table-responsive">
-			<table class="table table-bordered table-hover">
-				<thead>
-				    <tr>
-				        <th>#</th>
-				        <th>Name</th>
-				        <th>Username</th>
-				        <th>Email</th>
-				    </tr>
-				</thead>
-				<tbody>
-				    <tr ng-repeat="user in users">
-				        <td>{{ user.id }}</td>
-				        <td>{{ user.name }}</td>
-				        <td>{{ user.username }}</td>
-				        <td>{{ user.email }}</td>
-				    </tr>
-				</tbody>
-			</table>
-		</div>
-		<hr />
-		<h2>List of recent posts</h2>
-		<div class="well" ng-repeat="recent in recentPosts">
-	    	<div class="media">
-	  			<div class="media-body">
-	    			<h3 class="media-heading">{{ recent.title }}</h3>
-	          		<p>{{ recent.body }}</p>
-	       		</div>
-	    	</div>
+		<div class="listview">
+			<h2>List of registered users</h2>
+			<div class="table-responsive">
+				<table class="table table-bordered table-hover">
+					<thead>
+					    <tr>
+					        <th>#</th>
+					        <th>Name</th>
+					        <th>Username</th>
+					        <th>Email</th>
+					    </tr>
+					</thead>
+					<tbody>
+					    <tr ng-repeat="user in users">
+					        <td>{{ user.id }}</td>
+					        <td>{{ user.name }}</td>
+					        <td>{{ user.username }}</td>
+					        <td>{{ user.email }}</td>
+					    </tr>
+					</tbody>
+				</table>
+			</div>
+			<hr />
+			<h2>List of recent posts</h2>
+			<div class="well" ng-repeat="recent in recentPosts">
+		    	<div class="media">
+		  			<div class="media-body">
+		    			<h3 class="media-heading">{{ recent.title }}</h3>
+		          		<p>{{ recent.body }}</p>
+		       		</div>
+		    	</div>
+			</div>
 		</div>
 	</div>
 </div>

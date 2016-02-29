@@ -1,0 +1,45 @@
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="jumbotron">
+  			<h1>Trail Worker Application</h1>
+  			<p>Single Page Application based on AngularJS</p>
+		</div>
+	</div>
+</div>
+
+<div class="row" ng-controller="profileCtrl">
+  <div class="col-sm-3">
+    <div class="publish-leftblk">
+		<div class="user-image"><i class="fa fa-user"></i></div>
+		<p class="user-name"><strong>Name: </strong>{{ user_info.name }} ({{ user_info.username }})</p>
+		<p class="user-email"><strong>Email: </strong>{{ user_info.email }}</p>
+		<p class="user-address"><strong>Address: </strong>{{ user_info.address.street }}, {{ user_info.address.suite }}, {{ user_info.address.city }}, {{ user_info.address.zipcode }}</p>
+		<p class="user-phone"><strong>Phone: </strong>{{ user_info.phone }}</p>
+		<p class="user-website"><strong>Website: </strong>{{ user_info.website }}</p>
+		<p class="user-company"><strong>Company Name: </strong>{{ user_info.company.name }}</p>
+	</div>
+  </div>
+  <div class="col-sm-9 publish-block">
+    <div class="publish-rightblk">
+      <form name="publish-form" role="post-publish" class="form-horizontal" ng-submit="publish()">
+        <h2>Publish a new post</h2>
+        <input type="hidden" ng-model="newUserId">
+        <div class="form-group">
+          <label for="post-title" class="col-sm-3">Title</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="postTitle" placeholder="Title">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="post-body" class="col-sm-3">Message</label>
+          <div class="col-sm-9">
+          	<textarea class="form-control" ng-model="newBody" rows="4" placeholder="Enter your post here..."></textarea>
+          </div>
+        </div>
+        <a href="#/profile" class="btn btn-lg btn-default pull-left">Back</a>
+        <button class="btn btn-lg btn-danger pull-right" type="submit">Publish New Post</button>
+      </form>
+    </div>
+  </div>
+</div>

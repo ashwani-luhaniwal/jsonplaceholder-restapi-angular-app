@@ -59,6 +59,10 @@ angular.module('trailWorkerApp.controllers', []).
       $scope.totalComment = true;
     }
 
+    $scope.publish = function() {
+      
+    }
+
   }]).
 	controller('registerCtrl', ['$scope', '$resource', '$location', 'UsersList', function($scope, $resource, $location, UsersList) {
 

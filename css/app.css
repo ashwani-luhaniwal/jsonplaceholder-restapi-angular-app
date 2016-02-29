@@ -1,6 +1,23 @@
 .f-space10 {
     margin: 15px 0;
 }
+.login-block  h2,
+.listview h2,
+.comments-view h2,
+.publish-rightblk h2 {
+    background-color: #303030;
+    color: #fff;
+    margin: 0 0 15px;
+    padding: 5px 15px;
+    text-align: left;
+}
+.listview,
+.posts-comments,
+.publish-block {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
 .registeration-link {
 	margin: 15px 0;
 }
@@ -14,8 +31,10 @@
     margin: 8px 0;
     text-align: center;
 }
-.info-block {
-    border: 2px solid #333;
+.info-block,
+.publish-leftblk,
+.login-block {
+    border: 1px solid #333;
     border-radius: 5px;
     padding: 10px;
 }
@@ -23,7 +42,10 @@
     margin-bottom: 15px;
 }
 .profile-heading span {
+    background-color: #303030;
+    color: #fff;
     font-size: 30px;
+    padding: 5px 15px;
 }
 .jumbotron {
 	background-color: #ccc;
@@ -40,6 +62,12 @@
     margin-top: 15px;
     padding: 10px;
 }
-hr {
-    border-color: #333;
+
+@media only screen and (max-width : 768px) {
+    .listview,
+    .posts-comments,
+    .publish-block {
+        padding: 0px;
+        margin-top: 15px;
+    }
 }
