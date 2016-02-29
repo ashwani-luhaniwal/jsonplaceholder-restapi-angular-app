@@ -7,6 +7,7 @@ angular.module('trailWorkerApp', [
   'trailWorkerApp.services',
   'trailWorkerApp.controllers'
 ]).
+// specify the routing paths
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'trailWorkerCtrl'});
   $routeProvider.when('/register', {templateUrl: 'partials/register.html', controller: 'registerCtrl'});

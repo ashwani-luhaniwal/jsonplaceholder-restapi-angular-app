@@ -41,5 +41,15 @@
 				</tbody>
 			</table>
 		</div>
+		<hr />
+		<h2>List of recent posts</h2>
+		<div class="well" ng-repeat="recent in recentPosts">
+	    	<div class="media">
+	  			<div class="media-body">
+	    			<h4 class="media-heading">{{ recent.title }}</h4>
+	          		<p>{{ recent.body }}</p>
+	       		</div>
+	    	</div>
+		</div>
 	</div>
 </div>
