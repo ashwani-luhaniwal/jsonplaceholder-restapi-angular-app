@@ -44,15 +44,17 @@
 					<button class="btn btn-success pull-right" ng-click="comments(post.id)">Show comments</button>
 		       	</div>
 		    </div>
-		    <div class="comment-block" ng-show="commentBlock" ng-repeat="comment in post_comments">
-		    	<div class="comment-media">
-		  			<div class="comment-body">
-		    			<h4 class="comment-heading">{{ comment.name }}</h4>
-		          		<p class="text-right">By {{ comment.email }}</p>
-		          		<p>{{ comment.body }}</p>
-		       		</div>
-		    	</div>
-			</div>
+		</div>
+		<hr />
+		<h2 ng-show="totalComment">You have received {{ post_comments.length }} comments on this post.</h2>
+		<div class="well" ng-repeat="comment in post_comments">
+	    	<div class="media">
+	  			<div class="media-body">
+	    			<h4 class="media-heading">{{ comment.name }}</h4>
+	          		<p class="text-right">By {{ comment.email }}</p>
+	          		<p>{{ comment.body }}</p>
+	       		</div>
+	    	</div>
 		</div>
 	</div>
 </div>

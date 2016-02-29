@@ -33,14 +33,11 @@ angular.module('trailWorkerApp.controllers', []).
     }
   }]).
   controller('profileCtrl', ['$scope', '$resource', '$location', 'UsersList', function($scope, $resource, $location, UsersList) {
-    $scope.commentBlock = false;
+    $scope.totalComment = false;
     var currentUserId = localStorage.getItem('userId');
     if (currentUserId !== null) {
       $scope.user_info = UsersList.loggedInUser.get({user: currentUserId});
       $scope.user_posts = UsersList.userPosts.query({'userId': currentUserId});
-
-      // $scope.post_comments = UsersList.commentOnPost.query({'postId': });
-      // $scope.totalPosts = $scope.user_posts.length;
     }
     else {
       $location.path('/');
@@ -53,9 +50,7 @@ angular.module('trailWorkerApp.controllers', []).
 
     $scope.comments = function(post_id) {
       $scope.post_comments = UsersList.commentOnPost.query({'postId': post_id});
-      $scope.commentBlock = true;
-      // console.log($scope.post_comments);
-      // $location.path('/comments')
+      $scope.totalComment = true;
     }
 
   }]).
