@@ -25,3 +25,18 @@
 .profile-heading span {
     font-size: 30px;
 }
+.jumbotron {
+	background-color: #ccc;
+}
+.well {
+	background-color: #ddd;
+}
+.comment-body {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-left: 10%;
+    margin-top: 15px;
+    padding: 10px;
+}

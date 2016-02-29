@@ -14,6 +14,9 @@ angular.module('trailWorkerApp.services', []).
     		}),
     		userPosts: $resource(baseURL + "/posts/", {}, {
     			query: {method: 'GET', isArray: true }
-    		})
+    		}),
+        commentOnPost: $resource(baseURL + "/comments/", {}, {
+          query: {method: 'GET', isArray: true }
+        })
   		};
 	});

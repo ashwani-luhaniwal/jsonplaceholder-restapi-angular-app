@@ -18,7 +18,7 @@
 	</div>
 	<div class="col-sm-9">
 		<div class="profile-heading">
-			<span>You have posted {{ totalPosts }} posts</span>
+			<span>You have posted {{ user_posts.length }} posts</span>
 			<button class="btn btn-primary pull-right" type="button" ng-click="logout()">Log Out</button>
 		</div>
 		<div class="well" ng-repeat="post in user_posts">
@@ -31,8 +31,6 @@
 		          	<!-- <p class="text-right">By Francisco</p> -->
 		          	<p>{{ post.body }}</p>
 		          	<!-- <ul class="list-inline list-unstyled">
-		  				<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
-		            	<li>|</li>
 		            	<span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
 		            	<li>|</li>
 		            	<li>
@@ -43,8 +41,18 @@
 		                    <span class="glyphicon glyphicon-star-empty"></span>
 		            	</li>
 					</ul> -->
+					<button class="btn btn-success pull-right" ng-click="comments(post.id)">Show comments</button>
 		       	</div>
 		    </div>
+		    <div class="comment-block" ng-show="commentBlock" ng-repeat="comment in post_comments">
+		    	<div class="comment-media">
+		  			<div class="comment-body">
+		    			<h4 class="comment-heading">{{ comment.name }}</h4>
+		          		<p class="text-right">By {{ comment.email }}</p>
+		          		<p>{{ comment.body }}</p>
+		       		</div>
+		    	</div>
+			</div>
 		</div>
 	</div>
 </div>
