@@ -27,11 +27,12 @@
 		    		<img class="media-object" src="http://placekitten.com/150/150">
 		  		</a> -->
 		  		<div class="media-body">
-		    		<h4 class="media-heading">{{ post.title }}</h4>
-		          	<!-- <p class="text-right">By Francisco</p> -->
+		    		<h3 class="media-heading">{{ post.title }}</h3>
 		          	<p>{{ post.body }}</p>
-		          	<!-- <ul class="list-inline list-unstyled">
-		            	<span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+		          	<ul class="list-inline list-unstyled">
+		          		<li><p class="text-right"><strong>From:</strong> {{ user_info.name }} ({{ user_info.username }})</p></li>
+		          		<!-- <li>|</li>
+		            	<li><span><i class="glyphicon glyphicon-comment"></i> 2 comments</span></li>
 		            	<li>|</li>
 		            	<li>
 		               		<span class="glyphicon glyphicon-star"></span>
@@ -39,8 +40,8 @@
 		                    <span class="glyphicon glyphicon-star"></span>
 		                    <span class="glyphicon glyphicon-star"></span>
 		                    <span class="glyphicon glyphicon-star-empty"></span>
-		            	</li>
-					</ul> -->
+		            	</li> -->
+					</ul>
 					<button class="btn btn-success pull-right" ng-click="comments(post.id)">Show comments</button>
 		       	</div>
 		    </div>
@@ -50,9 +51,11 @@
 		<div class="well" ng-repeat="comment in post_comments">
 	    	<div class="media">
 	  			<div class="media-body">
-	    			<h4 class="media-heading">{{ comment.name }}</h4>
-	          		<p class="text-right">By {{ comment.email }}</p>
+	    			<h3 class="media-heading">{{ comment.name }}</h3>
 	          		<p>{{ comment.body }}</p>
+	          		<ul class="list-inline list-unstyled">
+		          		<li><p class="text-right"><strong>From:</strong> {{ comment.email }}</p></li>
+					</ul>
 	       		</div>
 	    	</div>
 		</div>
