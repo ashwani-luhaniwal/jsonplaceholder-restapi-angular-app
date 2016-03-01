@@ -20,25 +20,30 @@
 		<p class="user-company"><strong>Company Name: </strong>{{ user_info.company.name }}</p>
 	</div>
   </div>
-  <div class="col-sm-9 publish-block">
-    <div class="publish-rightblk">
+  <div class="col-sm-9">
+    <div class="publish-rightblk publish-block">
       <form name="publish-form" role="post-publish" class="form-horizontal" ng-submit="publish()">
         <h2>Publish a new post</h2>
-        <input type="hidden" ng-model="newUserId">
+        <input type="hidden" ng-model="newUserId" value="{{ user_info.id }}">
+        <input type="hidden" ng-model="post.id">
         <div class="form-group">
           <label for="post-title" class="col-sm-3">Title</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" ng-model="postTitle" placeholder="Title">
+            <input type="text" class="form-control" ng-model="post.title" placeholder="Title">
           </div>
         </div>
         <div class="form-group">
           <label for="post-body" class="col-sm-3">Message</label>
           <div class="col-sm-9">
-          	<textarea class="form-control" ng-model="newBody" rows="4" placeholder="Enter your post here..."></textarea>
+          	<textarea class="form-control" ng-model="post.body" rows="4" placeholder="Enter your post here..."></textarea>
           </div>
         </div>
-        <a href="#/profile" class="btn btn-lg btn-default pull-left">Back</a>
-        <button class="btn btn-lg btn-danger pull-right" type="submit">Publish New Post</button>
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#/profile" class="btn btn-lg btn-default pull-left">Back</a>
+            <button class="btn btn-lg btn-danger pull-right" type="submit">Publish New Post</button>
+          </div>
+        </div>
       </form>
     </div>
   </div>

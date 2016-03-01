@@ -60,7 +60,9 @@ angular.module('trailWorkerApp.controllers', []).
     }
 
     $scope.publish = function() {
-      
+      $scope.post = UsersList.publishPost.save($scope.post);
+      console.log($scope.post);
+      $scope.post = null;
     }
 
   }]).
